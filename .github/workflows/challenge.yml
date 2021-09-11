@@ -13,7 +13,7 @@ jobs:
         env:
           issues: "${{ github.event.issue.body }}"
           user: "${{ github.event.issue.user.login }}"
-          flag: "${{ secrets.Flag }}"
+          flag: "${{ secrets.FLAG }}"
         run: |
           echo "$flag:$issues" >> issues
           git config user.name github-actions
